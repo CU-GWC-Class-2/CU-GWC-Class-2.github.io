@@ -1,0 +1,94 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #005580;
+  color: white;
+}
+
+h2, h3 {
+	color: #FFFF4D;
+}
+
+h4 {
+	color: #990066;
+}
+
+a {
+	color: #990066;
+}
+
+hr {
+	border-color: #FFFF4D;
+}
+
+.bio {
+	display: none;
+}
+
+#teacherPic {
+	height: 50vh;
+	border: 1.5px solid #FFFF4D;
+}
+
+/* OPENING PAGE */
+#basicButton, #excitingButton {
+	transition: transform 2s;
+}
+
+#test {
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 3s;
+}
+
+/* BASIC PAGE */
+#main {
+	animation-duration: 2.5s;
+	animation-name: slide;
+
+}
+
+@keyframes slide{
+	from {
+		margin-top: -20%;
+	}
+
+	to {
+		margin-top: 0%;
+	}
+}
+
+#home, #lessonNotes, #teachers, #weekOne {
+	display: none;
+
+}
+
+.pastNotes {
+	color: #990066;
+	text-decoration: none;
+}
+
+#box {
+	background: #00E6BF;
+	height: 140vh;
+	color: #FFFF4D;
+	text-align: center;
+	animation-duration: 1s;
+	animation-name: slideRight;
+	border-right: solid 1.5px #FFFF4D;
+}
+
+@keyframes slideRight{
+	from {
+		margin-left: -20%;
+	}
+	to {
+		margin-right: auto;
+	}
+}
+
+
