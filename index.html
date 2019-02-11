@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>GWC@Columbia Class 2 Page</title>
+  <meta name="description" content="Columbia University GWC Class 2 Page!">
+  <meta name="author" content="Midori Sangiolo">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+<!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/anime.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+  
+
+
+</head>
+<body onload="initialSpace()">
+	
+	<div class="row">
+		<!-- Quick Links Sidebar 
+		_____________________________________________________________-->
+			<div id="box" class="two columns">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h5>Quick Links</h5>
+				<ul>
+					<li><a href="https://girlswhocode.com/">GWC Website</a></li>
+					<li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+					<li><a href="https://thimble.mozilla.org/en-US/">Thimble (online editor)</a></li>
+					<!-- <li><a href="#">Orange</a></li>
+					<li><a href="#">Green</a></li>
+					<li><a href="#">Blue</a></li>
+					<li><a href="#">Purple</a></li>
+					<li><a href="#">Black</a></li> -->
+				</ul>
+			</div>
+
+			<!-- Main Body
+			________________________________________________________-->
+			<div class="nine columns" id="main">
+				<br>
+				<h1 style="text-align: center;">GWC Class 2 Page</h1>
+				<hr>
+				<div class="row" style="text-align: center;">
+					<div class="one-third column" >
+						<button onclick="updateSpace('space','home')">home</button>
+					</div>
+					<div class="one-third column" >
+						<button onclick="updateSpace('space','lessonNotes')">lesson notes</button>
+					</div>
+					<div class="one-third column" >
+						<button onclick="updateSpace('space','teachers')">teachers</button>
+					</div>
+				</div>
+				
+				<hr>
+
+				<div class="row" >
+					<div id="space" style="opacity: 0;"></div> <!--Empty space to display info depending on which tab is clicked-->
+				</div>
+			</div>
+		</div>
+<!-- </div> -->
+	
+<!-- Home Page Tab Info
+_____________________________________________________________-->
+	<div id="home">
+		<div class="row">
+			<div class="three columns">
+				<h3 class='title'>QUESTION GENERATOR</h3>
+			</div>
+			<div class="eight columns">
+				<p>What is your favorite <span id="randomNoun">______</span>?</p>
+				<button onclick="generateNoun()">Click to generate random noun!</button>
+				<br>
+				<br>
+				<p>Try adding your own noun!</p>
+				<input type="text" name="data" id='newNoun' style="color: black;"> <button onclick="addNoun()">enter</button>
+				<p id="added"></p>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	var nounList = ['dog','cat','kitchen utensil','bird','tree','holiday','color','movie'];
+
+	function generateNoun() {
+		var noun = document.getElementById('randomNoun');	
+		var randIndex = Math.floor(Math.random()*nounList.length);
+		noun.innerHTML = nounList[randIndex];
+	}
+
+	function addNoun() {
+		newNoun = document.getElementById('newNoun').value;
+		nounList.push(newNoun);
+		console.log(nounList);
+		document.getElementById('newNoun').value = '';
+		document.getElementById('added').innerHTML = "You added '" + newNoun + "' to the list!"
+
+	}
+	
+</script>
+
+<!-- Lesson Notes Tab Info
+_______________________________________________________________________-->
+	<div id="lessonNotes">
+		<div class="row">
+			<div class="three columns">
+				<h3 class="title">LESSON NOTES</h3>
+				<h4>SPRING 2019</h4>
+				<ul>
+					<li>Week 1: <a href="#" onclick="updateSpace('lessonSpace','weekOne')">Intro to HTML</a></li>
+					<li>Week 2: Intro to CSS</li>
+				</ul>
+				<h4><a href="https://sites.google.com/view/columbiagwcclass2/home" class="pastNotes">FALL 2018</a></h4>
+				<h4><a href="https://sites.google.com/view/gwc-at-cu-class2spring2018/home" class="pastNotes">SPRING 2018</a></h4>
+				<h4><a href="#" class="pastNotes">FALL 2017</a></h4>
+			</div>
+			<div class="eight columns" id='lessonSpace'></div>
+		</div>
+	</div>
+
+
+	<!-- Class Notes
+	_________________________________________________________________-->
+	<div id="weekOne">
+		<div style="background: white;">
+						<!-- headings are defined with h# tags, with numbers from 1 to 6-->
+			<h1 style="color: blue;" align="center">THIS IS MY WEBSITE :)</h1>
+			
+			<h2 style="color: green;">This is a smaller heading</h2>
+			<h3 style="color: yellow;">This is an even smaller heading</h3> 
+			<h6 style="color: red;">This is the SMALLEST heading</h6> 
+			<!--You can change the color of your heading with the style attribute-->
+			
+			<a href="https://www.kungfutea.com/">
+				<img width="40%" src="https://www.godairyfree.org/wp-content/uploads/2015/09/Almond-Dairy-Free-Bubble-Tea-feature-4.jpg">
+				<!-- you MUST have an src attribute for images which has the link or reference to your image :) -->
+			</a>
+			<!--for images, you do NOT need a closing tag!-->
+			<!--You can resize an image with its width and height attributes with percentages (%) OR pixels (px)-->
+			<br>
+			<a href="http://spinningseal.com/" style="color: red;">THIS IS THE LINK</a>
+			<!-- a tag is the "link" tag-- ALWAYS need an href attribute -->
+			<!-- HOW TO LINK AN IMAGE: <a> <img> </a> -->
+
+			
+			<p>This is my website. It has links and boba. Click <a href="https://dynaimage.cdn.cnn.com/cnn/w_768,h_1024,c_scale/https%3A%2F%2Fdynaimage.cdn.cnn.com%2Fcnn%2Fx_1229%2Cy_0%2Cw_2712%2Ch_3616%2Cc_crop%2Fhttps%253A%252F%252Fstamp.static.cnn.io%252F5b7ac48b4db3d70020c01c13%252Fshutterstock_1081879181.jpg">here</a> for a picture of a dog.</p>
+			<!-- p tag stands for "paragraph"-->
+			<!-- only put a tags around the text you want to represent the link -->
+			
+		</div>
+		<a class="button" href="weekOneNotes.html" style="float: right">see full notes</a>
+	</div>
+
+
+<!-- Teachers tab
+___________________________________________-->
+	<div id="teachers">
+		<div class="row">
+			<div class="three columns">
+				<h3 class="title">TEACHERS</h3>
+				<h4><a onclick="showTeacherPicture('ashley')">Ashley An</a></h4>
+				<h4><a onclick="showTeacherPicture('shanice')">Shanice Bailey</a></h4>
+				<h4><a onclick="showTeacherPicture('una')">Una Miller</a></h4>
+				<h4><a onclick="showTeacherPicture('midori')">Midori Sangiolo</a></h4>
+				<h4><a onclick="showTeacherPicture('yuxin')">Yuxin Zhou</a></h4>
+			</div>
+			<div class="eight columns">
+				<center><img src="" id="teacherPic"></center>
+				<p id="teacherBio"></p>
+			</div>
+
+			<!--Teacher Bios
+			___________________________________________-->
+			<p class="bio" id="ashleyBio">
+				Ashley knows what's up. She likes to party like a rockstar by day and eat celery with peanut butter by night. In fact, you'll often run into her at daytime raves, celery stick in one hand, glowstick in the other. She is actually running for president in 2020 so stay tuned :0
+			</p>
+
+			<p class="bio" id="shaniceBio">
+				Shanice is a baking QUEEN: you name it, she'll bake it. Muffins, scones, bagels-- even things you wouldn't think are bake-able, like lamps and chapstick. Be careful though-- she has a particular aversion to keylime pie so do NOT mention it around her. Ask her about her stamp collection. 
+			</p>
+
+			<p class="bio" id="unaBio">
+				Una is actually a mermaid, so she doesn't need scuba gear when she swims down to the sea floor. She can be spotted wandering around campus with a trident. Don't talk to her on Thursdays unless you come bearing fruit (particularly of the tropical variety). 
+			</p>
+
+			<p class="bio" id="midoriBio">
+				Boba afficianado. Eco warrior. Sus-champ. She carries around her glass straw religiously. 
+			</p>
+
+			<p class="bio" id="yuxinBio">
+				Originally a professional soccer player, Yuxin switched to the world of knitting three years ago and has loved it ever since. His favorite color palette is orange, purple, taupe, and chartreuse-- a bold choice for a bold man. He'll knit you a single mitten (the left one) for free if you use the secret passcode!! (it's "left mitten")
+			</p>
+
+
+		</div>
+		<div class="row"></div>
+		<div class="row"></div>
+		
+	</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
