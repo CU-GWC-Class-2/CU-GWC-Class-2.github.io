@@ -62,7 +62,7 @@ hr {
 	}
 }
 
-#home, #lessonNotes, #teachers, #weekOne {
+#home, #lessonNotes, #teachers, #weekOne, #weekTwo {
 	display: none;
 
 }
