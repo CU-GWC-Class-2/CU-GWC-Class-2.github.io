@@ -1,0 +1,182 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+	GWC FIRST DAY WOOO
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+	<button onclick="toggleCode()" id="switch"></button>
+	<div id="space">
+
+	</div>
+	<div id="actualSite" style="display: none;">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<div class="container" id="wrap">
+				
+		<nav id="navbar" class="navbar navbar-default" role="navigation">
+			<div class="container">
+			<!--navbar-header-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home">Yuxin Zhou</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right" id="menuitem-list">
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#cv">CV</a>
+					</li>
+					<li class="btn-group">
+						<a href="#photos" class="dropdown-toggle" data-toggle="dropdown">photos</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#dogs">dogs</a>
+								</li>
+								<li>
+									<a href="#cats">cats</a>
+								</li>
+							</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</nav>
+	</div>
+	<div id="notes" style="display: none;">
+				<h1>HTML FILE: </h1>
+		<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"&gt;
+
+        &lt;script src="https://code.jquery.com/jquery-1.10.1.min.js"&gt;&lt;/script&gt;
+
+        &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+        &lt;div class="container" id="wrap"&gt;
+
+                                
+
+                &lt;nav id="navbar" class="navbar navbar-default" role="navigation"&gt;
+
+                        &lt;div class="container"&gt;
+
+                        &lt;!--navbar-header--&gt;
+
+                        &lt;div class="navbar-header"&gt;
+
+                                &lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"&gt;
+
+                                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+
+                                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+
+                                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+
+                                &lt;/button&gt;
+
+                                &lt;a class="navbar-brand" href="#home"&gt;Yuxin Zhou&lt;/a&gt;
+
+                        &lt;/div&gt;
+
+                        &lt;div class="collapse navbar-collapse" id="navbar-collapse"&gt;
+
+                                &lt;ul class="nav navbar-nav navbar-right" id="menuitem-list"&gt;
+
+                                        &lt;li&gt;
+
+                                                &lt;a href="#home"&gt;Home&lt;/a&gt;
+
+                                        &lt;/li&gt;
+
+                                        &lt;li&gt;
+
+                                                &lt;a href="#cv"&gt;CV&lt;/a&gt;
+
+                                        &lt;/li&gt;
+
+                                        &lt;li class="btn-group"&gt;
+
+                                                &lt;a href="#photos" class="dropdown-toggle" data-toggle="dropdown"&gt;photos&lt;/a&gt;
+
+                                                        &lt;ul class="dropdown-menu" role="menu"&gt;
+
+                                                                &lt;li&gt;
+
+                                                                        &lt;a href="#dogs"&gt;dogs&lt;/a&gt;
+
+                                                                &lt;/li&gt;
+
+                                                                &lt;li&gt;
+
+                                                                        &lt;a href="#cats"&gt;cats&lt;/a&gt;
+
+                                                                &lt;/li&gt;
+
+                                                        &lt;/ul&gt;
+
+                                        &lt;/li&gt;
+
+                                &lt;/ul&gt;
+
+                        &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                &lt;/nav&gt;
+
+        &lt;/div&gt;
+
+&lt;/body&gt;
+
+
+
+&lt;/html&gt;
+
+		</pre>
+		
+	</div>
+
+	<script type="text/javascript">
+		var counter = 0;
+		var space = document.getElementById('space');
+		var change = document.getElementById('switch');
+
+		function toggleCode(){
+			if (counter % 2 == 0) {
+				space.innerHTML = document.getElementById('notes').innerHTML;
+				change.innerHTML = "SHOW WEBSITE";
+			} else {
+				space.innerHTML = document.getElementById('actualSite').innerHTML;
+				change.innerHTML = "SHOW CODE";
+			}
+			counter += 1;
+		}
+
+	</script>
+
+</body>
+
+
+
+</html>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+	GWC FIRST DAY WOOO
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+	<button onclick="toggleCode()" id="switch"></button>
+	<div id="space">
+
+	</div>
+	<div id="actualSite" style="display: none;">
+	<style>
+		ul {
+			list-style-type:none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		li {
+			float: left;
+		}
+		
+		li a:hover{
+			background-color: #111
+		}
+		
+		li a{
+			padding: 14px 16px;
+			text-align: center;
+			display: block;
+			color: white;
+			text-decoration:none;
+		}
+	</style>
+	<ul>
+
+		<li><a href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>
+
+	</div>
+	<div id="notes" style="display: none;">
+				<h1>HTML FILE: </h1>
+		<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+        &lt;style&gt;
+
+                ul {
+
+                        list-style-type:none;
+
+                        margin: 0;
+
+                        padding: 0;
+
+                        overflow: hidden;
+
+                        background-color: #333;
+
+                }
+
+                li {
+
+                        float: left;
+
+                }
+
+                
+
+                li a:hover{
+
+                        background-color: #111
+
+                }
+
+                
+
+                li a{
+
+                        padding: 14px 16px;
+
+                        text-align: center;
+
+                        display: block;
+
+                        color: white;
+
+                        text-decoration:none;
+
+                }
+
+        &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+        &lt;ul&gt;
+
+
+
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+
+                &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+
+        &lt;/ul&gt;
+
+
+
+&lt;/body&gt;
+
+
+
+&lt;/html&gt;
+
+		</pre>
+		
+	</div>
+
+	<script type="text/javascript">
+		var counter = 0;
+		var space = document.getElementById('space');
+		var change = document.getElementById('switch');
+
+		function toggleCode(){
+			if (counter % 2 == 0) {
+				space.innerHTML = document.getElementById('notes').innerHTML;
+				change.innerHTML = "SHOW WEBSITE";
+			} else {
+				space.innerHTML = document.getElementById('actualSite').innerHTML;
+				change.innerHTML = "SHOW CODE";
+			}
+			counter += 1;
+		}
+
+	</script>
+
+</body>
+
+
+
+</html>
+
