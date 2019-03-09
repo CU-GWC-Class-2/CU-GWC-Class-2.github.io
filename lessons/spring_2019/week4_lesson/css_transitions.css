@@ -1,0 +1,130 @@
+body{
+	color: pink;
+}
+
+h1 {
+	color: purple;
+	text-align: center;
+}
+
+@keyframes slide-down {
+	from {
+		margin-top: -20%;
+	} 
+	to {
+		margin-top: 0%;
+	}
+}
+
+p {
+	text-align: center;
+	animation-duration: 2s;
+	/*animation-name: slide-down;*/
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	background-color: yellow;
+	border-radius: 50px; /*this is how you define a circle!!*/
+}
+
+.triangle {
+	width: 0; /* a triangle is made from the borders of a div */
+	height: 0; 
+/*	background-color: orange; --> use this to show how the triangle is made */
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid red;
+}
+
+#firstBox {
+	transform: rotate(20deg); 
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-iteration-count: 5;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#secondBox {
+	position: relative; /*THIS LINE IS CRUCIAL TO MAKE IT MOVE!!!*/
+
+	animation-name: rect;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes rect {
+	0% {top: 0px; left: 0px; background-color: purple;}
+	25% {top: 0px; left: 100px; background-color: green;}
+	50% {top: 100px; left: 100px; background-color: orange;}
+  	75% {top: 100px; left: 0px; background: red;}
+  	100% {top: 0px; left: 0px; background-color: purple;}
+}
+
+#thirdBox {
+	animation: slide-right 4s infinite alternate;
+}
+
+@keyframes slide-right {
+	0% {
+		margin-left: 0%;
+		margin-right: 100%;
+		background-color: red;
+	}
+
+	10% {
+		margin-left: 20%;
+		margin-right: 80%;
+		background-color: yellow;
+	}
+
+	50% {
+		margin-left: 30%;
+		margin-right: 70%;
+		background-color: green;
+	}
+
+	75% {
+		margin-left: 80%;
+		margin-right: 20%;
+		background-color: blue;
+	}
+
+	100% {
+		margin-left: 100%;
+		margin-right: 0%;
+		background-color: purple;
+	}
+
+
+}
+
+
+
+
+
+
+
+	
+
+
+
+
+

@@ -1,0 +1,35 @@
+body {
+	color: blue;
+	background: yellow;
+	font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+	color: purple;
+	text-align: center;
+	font-family: Verdana;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.caption {
+	font-style: italic;
+	text-decoration: underline;
+	color: green;
+}
+
+#specialImage {
+	border: solid red 10px;
+}

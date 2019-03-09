@@ -1,0 +1,50 @@
+img {
+
+	width: 33%;
+	border: solid red;
+	margin-left: 33%;
+
+}
+
+h1 {
+	font-family: "Impact";
+	color: green;
+	text-align: center;
+}
+
+h2 {
+
+	color: purple;
+	font-family: cursive;
+	text-align: center;
+}
+
+p {
+
+	color: blue;
+	font-family: "Geneva";
+
+
+}
+
+.caption {
+
+	color: orange;
+	font-size: 75%;
+	text-align: center;
+}
+
+
+#favorite_boba {
+
+	border: solid yellow;
+
+}
+
+.important {
+
+	font-style: italic;
+}
+
+
+

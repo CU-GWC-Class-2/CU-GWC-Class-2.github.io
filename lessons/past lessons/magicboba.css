@@ -1,0 +1,25 @@
+.title {
+	font-size: 300%;
+	font-family: Impact;
+	text-align: center;
+}
+
+
+#cup {
+	height: 500px;
+	width: 260px;
+	border: 10px solid green;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	background: tan;
+}
+
+.boba {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	background: black;
+	display: inline-block;
+
+	}

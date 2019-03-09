@@ -1,0 +1,25 @@
+.title {
+	font-size: 100px;
+	font-family: Impact;
+	text-align: center;
+}
+
+.circle {
+	height: 250px;
+	width: 250px;
+	border-radius: 125px;
+	display: inline-block;
+	margin: 30px;
+}
+
+#first {
+	background: red;
+}
+
+#second {
+	background: blue;
+}
+
+#third {
+	background: purple;
+}

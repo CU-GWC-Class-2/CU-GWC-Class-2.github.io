@@ -1,0 +1,77 @@
+h1 {
+	text-align: center;
+	font-size: 300%;
+}
+
+img {
+	width: 30%;
+	border: solid black;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+}
+
+body {
+	background-color: green;
+}
+
+p {
+	color: white;
+}
+
+
+#paragraph1 {
+	color: orange;
+	font-size: 20px;
+	text-align: center;
+}
+
+#specialimage {
+	border: solid yellow;
+}
+
+.joke {
+	text-align: right;
+	color: yellow;
+	font-size: 15px;
+}
+
+
+@media (max-width: 1000px)
+{
+	h1{
+		color: white;
+	}
+
+	h2{
+		color: white;
+	}
+
+	img {
+		border: solid white;
+	}
+
+	body {
+		background-color: red;
+	}
+
+	p {
+		color: black;
+	}
+
+	#paragraph1 {
+		color: blue; 
+	}
+
+	#specialimage {
+		border: solid purple;
+	}
+
+	.joke {
+		color: purple;
+	}
+
+
+
+}

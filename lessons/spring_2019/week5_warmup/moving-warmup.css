@@ -1,0 +1,154 @@
+.circle {
+	height: 100px;
+	width: 100px;
+	border-radius: 100px;
+
+	background-color: red;
+}
+
+.triangle {
+	height: 0px;
+	width: 0px;
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-top: 50px solid transparent;
+	border-bottom: 75px solid yellow;
+}
+
+.rect {
+	height: 100px;
+	width: 200px;
+	background-color: blue;
+}
+
+#special:hover {
+	animation: morph 4s;
+}
+
+@keyframes morph {
+	to {
+		height: 100px;
+		width: 100px;
+		border-radius: 100px;
+		background-color: green;
+	}
+}
+
+#falling-nav {
+	position: relative;
+	animation: drop 3s;
+}
+
+@keyframes drop {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 0px;
+	}
+}
+
+/*******FOR STRETCHING BAR******/
+#stretcher {
+	animation: stretch 5s alternate infinite;	
+}
+
+@keyframes stretch {
+	from {
+		width: 0px;
+		background-color: blue;
+	}
+
+	to {
+		width: 1000px;
+		background-color: pink;
+	}
+}
+
+/*******FOR TRIANGLE TUMBLE******/
+#triangle-mover {
+	position: relative;
+	animation: triangle-path 5s infinite;
+}
+
+@keyframes triangle-path {
+	0% {
+		left: 650px;
+		top: 0px;
+	}
+
+	33% {
+		left: 1300px;
+		top: 450px;
+		transform: rotate(120deg);
+	}
+
+	66% {
+		left: 0px;
+		top: 450px;
+		transform: rotate(240deg);
+
+	}
+
+	100% {
+		left: 650px;
+		top: 0px;
+		transform: rotate(360deg);
+
+	}
+}
+
+/*******FOR ZIG ZAG PATH******/
+#zigzagger {
+	position: relative;
+	animation: zigzag 5s infinite alternate; 
+}
+
+@keyframes zigzag {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+
+	33% {
+		left: 1000px;
+		top: 0px;
+	}
+
+	66% {
+		left: 0px;
+		top: 500px;
+	}
+
+	100% {
+		left: 1000px;
+		top: 500px;
+	}
+
+}
+
+
+/*NAVIGATION BAR STYLING*/
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a:hover{
+    background-color: #111
+}
+
+li a {
+    padding: 14px 16px;
+    text-align: center;
+    display: block;
+    color: white;
+    text-decoration:none;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Bar</title>
+</head>
+
+
+<body>
+<style type="text/css">
+	ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+		}
+
+	li a {
+	    display: inline;
+	    width: /*auto*/60px;
+	    /*margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;*/
+	    text-decoration: none;
+
+	}
+	li a:hover {
+	    background-color: green;
+	    color: white;
+	}
+
+	#right-button {
+		float:right;
+		color: white;
+		background-color: black; 
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+
+	#left-button {
+		float:left;
+		color: white;
+		background-color: black; 
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+	#right-button:hover {
+		color: black;
+		background-color: white;
+	}
+
+
+
+
+
+</style>
+
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+</ul>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="https://images.ecosia.org/VhicrgYZ3SBXTGNVUAWJHP_6N3Y=/0x390/smart/https%3A%2F%2Fcontent.jobsdb.co.id%2FContent%2FCmsContent%2FLogo%2FID%2FJobsDBFiles%2FCompanyLogo%2FACCOUNT%2520EXECUTIVE%2520-%2520PERDANA%2520IMMG%2520INDONESIA%2C%2520PT%2520-%2520jobsDB%2520Indonesia.jpg" style="width:100%">
+  <img class="mySlides" src="https://images.ecosia.org/lqUT8q2-lFR9dj4_wutu4P1onCY=/0x390/smart/https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F613185372399341568%2F5NP-pEUX.png" style="width:100%">
+  <img class="mySlides" src="https://images.ecosia.org/Up1CcD-cpFc5S6gTIcUV1F2GK-M=/0x390/smart/https%3A%2F%2Fimmgphoto.files.wordpress.com%2F2015%2F05%2Fimmg-logo.png%3Fw%3D200" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+</body>
+
+
+
+
+</html>
