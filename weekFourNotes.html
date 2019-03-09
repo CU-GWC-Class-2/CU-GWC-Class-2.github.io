@@ -1,0 +1,403 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+	Week 4 Notes
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+	<button onclick="toggleCode()" id="switch"></button>
+	<div id="space">
+
+	</div>
+	<div id="actualSite" style="display: none;">
+		<div id="heading">
+		<h1>Fun with CSS!!!!!!</h1>
+		<h2>Transitions and animations with shapes :0</h2>
+	</div>
+	
+	<div class="square" id="movingSquare"></div>
+	<br>
+	<div class="rect"> </div>
+	<br>
+	<div class="tri" id="movingTriangle"> </div>
+	<br>
+	<div class="circle" id="movingCircle"> </div>
+	<br>
+	<div class="square" id="tilted"></div>
+	</div>
+	<div id="notes" style="display: none;">
+
+		<style type="text/css">
+			h1 {
+	color: green;
+	text-align: center;
+}
+
+h2 {
+	color: pink;
+	text-align: center;
+}
+
+#heading {
+	background-color: blue;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+
+
+.rect {
+	width: 50px;
+	height: 100px;
+	background-color: blue;
+}
+
+.tri {
+	width: 0px;
+	height: 0px;
+	border-right: 50px solid yellow;
+	border-left: 50px solid orange;
+	border-top: 50px solid purple;
+	border-bottom: 50px solid green;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	border-radius: 100px;
+}
+
+#movingCircle{
+	position: relative;
+	
+	animation: path 5s infinite;
+}
+
+@keyframes path {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		left: 100px;
+		top: 0px;
+	}
+	50% {
+		left: 100px;
+		top: 100px;
+	}
+	75% {
+		left: 0px;
+		top: 100px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+
+
+#tilted {
+	transform: rotate(30deg);
+	position: relative;
+	
+	animation-name: triPath;
+	animation-duration: 5s;
+}
+
+@keyframes triPath {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	33% {
+		left: 100px;
+		top: 100px;
+	}
+	66% {
+		left: 0px;
+		top: 100px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+#movingSquare {
+	position: relative;
+	
+	animation-name: move;
+	animation-duration: 2s;
+}
+
+@keyframes move {
+	from {
+		left: 0px;
+		background-color: red;
+	}
+	to {
+		left: 100px;
+		background-color: green;
+	}
+}
+
+#movingTriangle {
+	position: relative;
+	
+	animation-name: triangleMove;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes triangleMove {
+	from {
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	to {
+		left: 1000px;
+		transform: rotate(360deg);
+	}
+}
+		</style>
+		<pre>
+
+<h1>HTML File</h1>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+
+
+&lt;head&gt;
+
+        &lt;title&gt;Fun with CSS :)&lt;/title&gt;
+
+        
+
+        &lt;link rel="stylesheet" type="text/css" href="css-transitions.css"&gt;
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+        &lt;div id="heading"&gt;
+
+                &lt;h1&gt;Fun with CSS!!!!!!&lt;/h1&gt;
+
+                &lt;h2&gt;Transitions and animations with shapes :0&lt;/h2&gt;
+
+        &lt;/div&gt;
+
+        
+
+        &lt;div class="square" id="movingSquare"&gt;&lt;/div&gt;
+
+        &lt;br&gt;
+
+        &lt;div class="rect"&gt; &lt;/div&gt;
+
+        &lt;br&gt;
+
+        &lt;div class="tri" id="movingTriangle"&gt; &lt;/div&gt;
+
+        &lt;br&gt;
+
+        &lt;div class="circle" id="movingCircle"&gt; &lt;/div&gt;
+
+        &lt;br&gt;
+
+        &lt;div class="square" id="tilted"&gt;&lt;/div&gt;
+
+
+
+
+
+&lt;/body&gt;
+
+
+
+&lt;/html&gt;
+
+<br>
+<br>
+<h1>CSS File</h1>
+h1 {
+	color: green;
+	text-align: center;
+}
+
+h2 {
+	color: pink;
+	text-align: center;
+}
+
+#heading {
+	background-color: blue;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+
+
+.rect {
+	width: 50px;
+	height: 100px;
+	background-color: blue;
+}
+
+.tri {
+	width: 0px;
+	height: 0px;
+	border-right: 50px solid yellow;
+	border-left: 50px solid orange;
+	border-top: 50px solid purple;
+	border-bottom: 50px solid green;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	border-radius: 100px;
+}
+
+#movingCircle{
+	position: relative;
+	
+	animation: path 5s infinite;
+}
+
+@keyframes path {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		left: 100px;
+		top: 0px;
+	}
+	50% {
+		left: 100px;
+		top: 100px;
+	}
+	75% {
+		left: 0px;
+		top: 100px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+
+
+#tilted {
+	transform: rotate(30deg);
+	position: relative;
+	
+	animation-name: triPath;
+	animation-duration: 5s;
+}
+
+@keyframes triPath {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	33% {
+		left: 100px;
+		top: 100px;
+	}
+	66% {
+		left: 0px;
+		top: 100px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+#movingSquare {
+	position: relative;
+	
+	animation-name: move;
+	animation-duration: 2s;
+}
+
+@keyframes move {
+	from {
+		left: 0px;
+		background-color: red;
+	}
+	to {
+		left: 100px;
+		background-color: green;
+	}
+}
+
+#movingTriangle {
+	position: relative;
+	
+	animation-name: triangleMove;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes triangleMove {
+	from {
+		left: 0px;
+		transform: rotate(0deg);
+	}
+	to {
+		left: 1000px;
+		transform: rotate(360deg);
+	}
+}
+		</pre>
+	</div>
+
+	<script type="text/javascript">
+		var counter = 0;
+		var space = document.getElementById('space');
+		var change = document.getElementById('switch');
+
+		function toggleCode(){
+			if (counter % 2 == 0) {
+				space.innerHTML = document.getElementById('notes').innerHTML;
+				change.innerHTML = "SHOW WEBSITE";
+			} else {
+				space.innerHTML = document.getElementById('actualSite').innerHTML;
+				change.innerHTML = "SHOW CODE";
+			}
+			counter += 1;
+		}
+
+	</script>
+
+</body>
+
+
+
+</html>
+
