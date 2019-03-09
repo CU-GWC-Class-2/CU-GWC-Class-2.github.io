@@ -62,9 +62,13 @@ hr {
 	}
 }
 
-#home, #lessonNotes, #teachers, #weekOne, #weekTwo {
+#home, #lessonNotes, #teachers {
 	display: none;
 
+}
+
+#weekOne, #weekTwo, #weekThree, #weekFour, #weekFive, #weekSix, #weekSeven, #weekEight, #weekNine {
+	display: none;
 }
 
 .pastNotes {
