@@ -1,0 +1,120 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+	Week 5 Notes
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+	<button onclick="toggleCode()" id="switch"></button>
+	<div id="space">
+
+	</div>
+	<div id="actualSite" style="display: none;">
+		<script type="text/javascript">
+		// variable declaration. Notice that you don't need to specify the variable type
+		var number = 1;
+		// declare a function called update. This function takes no input parameters
+		function update(){
+		// the following two lines can resize an image
+/*			document.getElementById('img').style.height='100px';
+			document.getElementById('img').style.width='200px';*/
+		// make number switch between 1 and -1
+			number = number * -1;
+			if (number == -1){
+				document.getElementById('img').src='https://i.kym-cdn.com/entries/icons/medium/000/028/075/nu_doge_thumb.png';
+			}
+			if (number == 1){
+				document.getElementById('img').src='https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Original_Doge_meme.jpg/300px-Original_Doge_meme.jpg';
+			}
+		}
+		</script>
+	<!-- onclick specifies the function to call when the image is called-->
+		<img id='img' src='https://i.kym-cdn.com/entries/icons/medium/000/028/075/nu_doge_thumb.png' onclick="update()">
+	</div>
+	<div id="notes" style="display: none;">
+		<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+        &lt;head&gt;
+
+                // below is javascript
+
+                &lt;script type="text/javascript"&gt;
+
+                // variable declaration. Notice that you don't need to specify the variable type
+
+                var number = 1;
+
+                // declare a function called update. This function takes no input parameters
+
+                function update(){
+
+                // the following two lines can resize an image
+
+/*                      document.getElementById('img').style.height='100px';
+
+                        document.getElementById('img').style.width='200px';*/
+
+                // make number switch between 1 and -1
+
+                        number = number * -1;
+
+                        if (number == -1){
+
+                                document.getElementById('img').src='https://i.kym-cdn.com/entries/icons/medium/000/028/075/nu_doge_thumb.png';
+
+                        }
+
+                        if (number == 1){
+
+                                document.getElementById('img').src='https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Original_Doge_meme.jpg/300px-Original_Doge_meme.jpg';
+
+                        }
+
+                }
+
+                &lt;/script&gt;
+
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+        // onclick specifies the function to call when the image is called
+
+                &lt;img id='img' src='https://i.kym-cdn.com/entries/icons/medium/000/028/075/nu_doge_thumb.png' onclick="update()"&gt;
+
+        &lt;/body&gt;
+
+&lt;/html&gt;
+		</pre>
+	</div>
+
+	<script type="text/javascript">
+		var counter = 0;
+		var space = document.getElementById('space');
+		var change = document.getElementById('switch');
+
+		function toggleCode(){
+			if (counter % 2 == 0) {
+				space.innerHTML = document.getElementById('notes').innerHTML;
+				change.innerHTML = "SHOW WEBSITE";
+			} else {
+				space.innerHTML = document.getElementById('actualSite').innerHTML;
+				change.innerHTML = "SHOW CODE";
+			}
+			counter += 1;
+		}
+
+	</script>
+
+</body>
+
+
+
+</html>
+

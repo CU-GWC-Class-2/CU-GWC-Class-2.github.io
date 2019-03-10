@@ -140,7 +140,7 @@ _______________________________________________________________________-->
 					<li>Week 2: <a href="#" onclick="updateSpace('lessonSpace','weekTwo')">Intro to CSS</a></li>
 					<li>Week 3: <a href="#" onclick="updateSpace('lessonSpace','weekThree')">Navigation Bar</a></li>
 					<li>Week 4: <a href="#" onclick="updateSpace('lessonSpace','weekFour')">Animation with CSS</a></li>
-					<li>Week 5: <a href="lessons/spring_2019/week5_warmup/zig-zag.html"">WARM UP</a></li>
+					<li>Week 5: <a href="lessons/spring_2019/week5_warmup/zig-zag.html"">WARM UP</a><br><a href="#" onclick="updateSpace('lessonSpace','weekFive')">Intro to JavaScript</a></li> 
 				</ul>
 				<h4><a href="https://sites.google.com/view/columbiagwcclass2/home" class="pastNotes">FALL 2018</a></h4>
 				<h4><a href="https://sites.google.com/view/gwc-at-cu-class2spring2018/home" class="pastNotes">SPRING 2018</a></h4>
@@ -153,6 +153,12 @@ _______________________________________________________________________-->
 
 	<!-- Class Notes
 	_________________________________________________________________-->
+	<div id="weekFive">
+		<p>We learned the basics of JavaScript, including variables, data types, and functions! In our class example, we used JavaScript to toggle between two images when you click on it! This involved creating a variable (which we named "number") and setting its value to 1. Whenever we clicked on the image, we called a function that multiplied this number by -1 and then checked its value: if its new value was -1, the images' source link would be set to a link corresponding to the first image, and if its new value was 1, the source link would correspond to the second image. To do this, we incorporated a the "getElementById" function, which allows us to access any element in our webpage with a specific id (which is why ids are so powerful and important, and why you shouldn't give two elements the same id!). </p>
+		<a class="button" href="weekFiveNotes.html">SWITCHING IMAGES WITH JAVASCRIPT</a> <br>
+
+	</div>
+
 	<div id="weekFour">
 		<p>We started some advanced CSS this week, learning how to make simple shapes (triangles, squares, and circles) out of divs and then how to animate them!! To make squares out of divs, we created a .square css class and defined two properties: height and width. To make circles, we used the border-radius property in a .circle css class, setting it equal to the same value we chose for height and width (what happens when we don't make border-radius the same size as the height and width of the div??). To make triangles, we created a .triangle css class and set the properties of height and width to 0. Then, since the borders of a div are defined by triangles by default, we made all of the borders of the div transparent except for one (which we gave a specific color), using the properties border-right, border-left, border-top, and border-bottom. </p> 
 		<p>When we made the shapes move, we defined animations in our css file with @keyframes. We defined exactly where we wanted our element to be at a given point in the animation (0%, 25%, 66%, etc) by altering multiple properties at each point. To get this animation to work for a specific element, we gave the element an id and defined its animation property with the name of the animation we created with @keyframes and the duration of the animation. We even manipulated the repetition of the animation, specifying whether we wanted it to be infinitely repeating and/or alternating directions! </p>
