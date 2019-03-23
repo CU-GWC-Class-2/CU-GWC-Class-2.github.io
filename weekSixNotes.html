@@ -1,0 +1,151 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+        Week 6 Notes
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+        <button onclick="toggleCode()" id="switch"></button>
+        <div id="space">
+
+        </div>
+        <div id="actualSite" style="display: none;">
+                <link rel="stylesheet" type="text/css" href="lessons/spring_2019/week6_lesson/more-js.css">
+                <h1>THREE CIRCLES!!!!!!!!!</h1>
+                <br>
+                <div>
+                        <div class="circle" id="one" onclick="changeColor('one')"> </div>
+                        <div class="circle" id="two" onclick="randomItem()"> </div>
+                        <div class="circle" id="three" onclick="changeColor('three')"> </div>
+                </div>
+                
+                
+                <script src="lessons/spring_2019/week6_lesson/more-js.js"></script>
+        </div>
+        <div id="notes" style="display: none;">
+                <pre>
+<h1>HTML File: </h1>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt; 
+
+        &lt;title&gt;Three Circles&lt;/title&gt;
+
+        
+
+        &lt;link rel="stylesheet" href="more-js.css" type="text/css"&gt; 
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+        &lt;h1&gt;THREE CIRCLES!!!!!!!!!&lt;/h1&gt;
+
+        &lt;br&gt;
+
+        &lt;div&gt;
+
+                &lt;div class="circle" id="one" onclick="changeColor('one')"&gt; &lt;/div&gt;
+
+                &lt;div class="circle" id="two" onclick="randomItem()"&gt; &lt;/div&gt;
+
+                &lt;div class="circle" id="three" onclick="changeColor('three')"&gt; &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        
+
+        
+
+        &lt;script src="more-js.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+
+<h1>CSS File: </h1>
+.circle {
+        background-color: rgb(0,0,0);
+        
+        height: 250px;
+        width: 250px;
+        border-radius: 250px;
+        
+        display: inline-block;
+}
+
+
+
+<h1>JavaScript File: </h1>
+function changeColor(name) {
+        var r = Math.random()*256;
+        var g = Math.random()*256;
+        var b = Math.random()*256;
+        //"hello" + "there" --> "hellothere"
+        
+        var color = "rgb("+r+","+g+","+b+")";
+        
+        document.getElementById(name).style.backgroundColor = color;
+}
+/* 
+Grocery list: potatoes, oat milk, eggs, blackberries
+*/
+
+var groceryList = ["potatoes", "oat milk", "eggs", "blackberries"];
+                //indices:      0    ,     1     ,   2   ,      3       
+
+var intList =[1,2,3,4,5,23787,135];
+  //indices: 0,1,2,3,4,  5  , 6
+/*      
+var favoriteFood=groceryList[1];
+
+console.log(favoriteFood);
+*/
+
+//Math.floor(SOMETHING) --> chops of decimal point (truncating decimal)
+
+function randomItem() {
+        var randIndex = Math.floor(Math.random()*4);//bounds of the index: 0 to 3 (inclusive)
+        console.log(randIndex);
+        document.getElementById("two").innerHTML = groceryList[randIndex];
+        
+        changeColor("two");
+}
+
+
+</pre>
+        </div>
+
+        <script type="text/javascript">
+                var counter = 0;
+                var space = document.getElementById('space');
+                var change = document.getElementById('switch');
+
+                function toggleCode(){
+                        if (counter % 2 == 0) {
+                                space.innerHTML = document.getElementById('notes').innerHTML;
+                                change.innerHTML = "SHOW WEBSITE";
+                        } else {
+                                space.innerHTML = document.getElementById('actualSite').innerHTML;
+                                change.innerHTML = "SHOW CODE";
+                        }
+                        counter += 1;
+                }
+
+        </script>
+
+</body>
+
+
+
+</html>
+
