@@ -141,6 +141,7 @@ _______________________________________________________________________-->
 					<li>Week 3: <a href="#" onclick="updateSpace('lessonSpace','weekThree')">Navigation Bar</a></li>
 					<li>Week 4: <a href="#" onclick="updateSpace('lessonSpace','weekFour')">Animation with CSS</a></li>
 					<li>Week 5: <a href="lessons/spring_2019/week5_warmup/zig-zag.html"">WARM UP</a><br><a href="#" onclick="updateSpace('lessonSpace','weekFive')">Intro to JavaScript</a></li> 
+					<li>Week 6: <a href="#" onclick="updateSpace('lessonSpace','weekSix')">JavaScript Functions</a></li>
 				</ul>
 				<h4><a href="https://sites.google.com/view/columbiagwcclass2/home" class="pastNotes">FALL 2018</a></h4>
 				<h4><a href="https://sites.google.com/view/gwc-at-cu-class2spring2018/home" class="pastNotes">SPRING 2018</a></h4>
@@ -153,6 +154,14 @@ _______________________________________________________________________-->
 
 	<!-- Class Notes
 	_________________________________________________________________-->
+	<div id="weekSix">
+		<p>We continued learning about JavaScript by making two new functions-- one to change the color of a circle to a random color and one to print out a random element in a list. For both of these functions, we used Math.random(), a built-in JavaScript function that gives us a random number from 0 to 1 (including 0 but not including 1). We were then able to create random ranges of numbers between 0 and whatever number we wanted by multiplying by the upper (non-inclusive) bound of our desired range. </p>
+		<p>Something important that came up in class was how to use the value of a variable in a string. For example, if we have a variable called number that we set equal to 7 (var number = 7), if we want to print out the number, we would write: console.log(number). On the other hand, to print out the word "number," we would write: console.log("number").
+		</p>
+		<a class="button" href="weekSixNotes.html">JAVASCRIPT FUNCTIONS</a> <br>
+
+	</div>
+
 	<div id="weekFive">
 		<p>We learned the basics of JavaScript, including variables, data types, and functions! In our class example, we used JavaScript to toggle between two images when you click on it! This involved creating a variable (which we named "number") and setting its value to 1. Whenever we clicked on the image, we called a function that multiplied this number by -1 and then checked its value: if its new value was -1, the images' source link would be set to a link corresponding to the first image, and if its new value was 1, the source link would correspond to the second image. To do this, we incorporated a the "getElementById" function, which allows us to access any element in our webpage with a specific id (which is why ids are so powerful and important, and why you shouldn't give two elements the same id!). </p>
 		<a class="button" href="weekFiveNotes.html">SWITCHING IMAGES WITH JAVASCRIPT</a> <br>
