@@ -1,0 +1,210 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+	Week 7 Notes
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+	<button onclick="toggleCode()" id="switch"></button>
+	<div id="space">
+
+	</div>
+	<div id="actualSite" style="display: none;">
+		<script type="text/javascript">
+		function hello(){
+	
+	var word = ["h","e","l","l","o"];
+
+	for (var i=1; i < word.length; i=i+2){
+
+		alert(word[i]);
+
+	}
+}
+
+function changeImage()
+{
+    // list of image urls
+    var img_list  = ["http://www.spirit-animals.com/wp-content/uploads/2013/10/Panda-2-sm.jpg", "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", "https://www.what-dog.net/Images/faces2/scroll001.jpg"];
+
+    // get the url of the image currently on the page
+    var img_curr = document.getElementById("animalImage").src;
+
+    // loop through list of image urls
+    for (var i=0; i < img_list.length; i=i+1) 
+    {
+        var img = img_list[i]; // set variable img equal to element at index i of list of images
+        if (img == img_curr) // test to see if you've found the current image
+        {
+            if (i == img_list.length - 1) // found the last image in the list
+            { 
+                document.getElementById("animalImage").src = img_list[0]; // loop back to first image
+            }
+            else // not the last image in the list
+            { 
+                document.getElementById("animalImage").src = img_list[i + 1]; // change to next image in the list
+            }
+        }
+    }   
+}
+		</script>
+
+		<style type="text/css">
+			.title {
+	text-align: center;
+	font-size: 50px;
+}
+
+#hello {
+	margin-top: 50px;
+	text-align: center;
+}
+
+img {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+		</style>
+	<div class="title">Loops!</div>
+
+	<div id="hello" onclick="hello()"> hello?</div>
+
+	<img id ="animalImage" src="http://www.spirit-animals.com/wp-content/uploads/2013/10/Panda-2-sm.jpg" onClick="changeImage()">
+	</div>
+	<div id="notes" style="display: none;">
+		<pre>
+<h1>HTML File:</h1>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+
+
+&lt;head&gt;
+
+        &lt;title&gt;Loops&lt;/title&gt;
+
+        
+
+        &lt;script src="loops.js"&gt;&lt;/script&gt;
+
+        &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+
+
+        &lt;div class="title"&gt;Loops!&lt;/div&gt;
+
+
+
+        &lt;div id="hello" onclick="hello()"&gt; hello?&lt;/div&gt;
+
+
+
+        &lt;img id ="animalImage" src="http://www.spirit-animals.com/wp-content/uploads/2013/10/Panda-2-sm.jpg" onClick="changeImage()"&gt;
+
+
+
+&lt;/body&gt;
+
+
+
+&lt;/html&gt;
+
+
+<h1>CSS File:</h1>
+.title {
+	text-align: center;
+	font-size: 50px;
+}
+
+#hello {
+	margin-top: 50px;
+	text-align: center;
+}
+
+img {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+
+<h1>JavaScript File:</h1>
+function hello(){
+	
+	var word = ["h","e","l","l","o"];
+
+	for (var i=1; i < word.length; i=i+2){
+
+		alert(word[i]);
+
+	}
+}
+
+function changeImage()
+{
+    // list of image urls
+    var img_list  = ["http://www.spirit-animals.com/wp-content/uploads/2013/10/Panda-2-sm.jpg", "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", "https://www.what-dog.net/Images/faces2/scroll001.jpg"];
+
+    // get the url of the image currently on the page
+    var img_curr = document.getElementById("animalImage").src;
+
+    // loop through list of image urls
+    for (var i=0; i < img_list.length; i=i+1) 
+    {
+        var img = img_list[i]; // set variable img equal to element at index i of list of images
+        if (img == img_curr) // test to see if you've found the current image
+        {
+            if (i == img_list.length - 1) // found the last image in the list
+            { 
+                document.getElementById("animalImage").src = img_list[0]; // loop back to first image
+            }
+            else // not the last image in the list
+            { 
+                document.getElementById("animalImage").src = img_list[i + 1]; // change to next image in the list
+            }
+        }
+    }   
+}
+		</pre>
+	</div>
+
+	<script type="text/javascript">
+		var counter = 0;
+		var space = document.getElementById('space');
+		var change = document.getElementById('switch');
+
+		function toggleCode(){
+			if (counter % 2 == 0) {
+				space.innerHTML = document.getElementById('notes').innerHTML;
+				change.innerHTML = "SHOW WEBSITE";
+			} else {
+				space.innerHTML = document.getElementById('actualSite').innerHTML;
+				change.innerHTML = "SHOW CODE";
+			}
+			counter += 1;
+		}
+
+	</script>
+
+</body>
+
+
+
+</html>
+

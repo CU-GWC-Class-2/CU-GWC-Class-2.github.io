@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!--VERY MPORTANT-->
+<html>
+<head>
+ <title>
+	Week 8 Warmup
+ </title>
+  
+</head>
+
+<body onload="toggleCode()">
+	<button onclick="toggleCode()" id="switch"></button>
+	<div id="space">
+
+	</div>
+	<div id="actualSite" style="display: none;">
+		<script>
+var str = '';
+
+for(i = 0; i < 5 ; i++) {
+    for(j = 0; j <= i; j++) {
+       str += '*';
+    }
+    str += '\n';
+}
+console.log(str);
+	</script>
+	<div id="notes" style="display: none;">
+		<pre>
+<h1>HTML File:</h1>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+        &lt;script&gt;
+
+var str = '';
+
+
+
+for(i = 0; i &lt; 5 ; i++) {
+
+    for(j = 0; j &lt;= i; j++) {
+
+       str += '*';
+
+    }
+
+    str += '\n';
+
+}
+
+console.log(str);
+
+        &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+		</pre>
+	</div>
+
+	<script type="text/javascript">
+		var counter = 0;
+		var space = document.getElementById('space');
+		var change = document.getElementById('switch');
+
+		function toggleCode(){
+			if (counter % 2 == 0) {
+				space.innerHTML = document.getElementById('notes').innerHTML;
+				change.innerHTML = "SHOW WEBSITE";
+			} else {
+				space.innerHTML = document.getElementById('actualSite').innerHTML;
+				change.innerHTML = "SHOW CODE";
+			}
+			counter += 1;
+		}
+
+	</script>
+
+</body>
+
+
+
+</html>
+
